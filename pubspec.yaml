@@ -1,0 +1,188 @@
+name: sidrive
+description: Platform transportasi dan belanja eksklusif untuk mahasiswa UMSIDA
+# Publish ke pub.dev? false (private app)
+publish_to: 'none'
+
+# Versi aplikasi: 1.0.0+1 
+# Format: major.minor.patch+buildNumber
+version: 1.0.0+1
+
+# Minimal SDK Dart yang dibutuhkan
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+# ============================================================================
+# DEPENDENCIES - Library yang dibutuhkan aplikasi
+# ============================================================================
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ──────────────────────────────────────────────────────────────────────────
+  # SUPABASE - Backend as a Service
+  # ──────────────────────────────────────────────────────────────────────────
+  supabase_flutter: ^2.0.0
+  
+  # ──────────────────────────────────────────────────────────────────────────
+  # STATE MANAGEMENT - Untuk manage state aplikasi
+  # ──────────────────────────────────────────────────────────────────────────
+  provider: ^6.1.2  # Simple & powerful state management
+  
+  # ──────────────────────────────────────────────────────────────────────────
+  # UI & DESIGN - Untuk tampilan yang bagus
+  # ──────────────────────────────────────────────────────────────────────────
+  google_fonts: ^6.1.0              # Font corporate (Plus Jakarta Sans, Inter, Poppins)
+  flutter_svg: ^2.0.9               # Support SVG images
+  cached_network_image: ^3.3.0      # Cache gambar dari internet
+  shimmer: ^3.0.0                   # Loading effect shimmer
+  
+  # ──────────────────────────────────────────────────────────────────────────
+  # NAVIGATION - Routing & navigasi antar screen
+  # ──────────────────────────────────────────────────────────────────────────
+  go_router: ^12.1.3                # Modern routing solution
+  
+  # ──────────────────────────────────────────────────────────────────────────
+  # LOCAL STORAGE - Simpan data di device
+  # ──────────────────────────────────────────────────────────────────────────
+  shared_preferences: ^2.2.2        # Save theme preference, login state, dll
+  
+  # ──────────────────────────────────────────────────────────────────────────
+  # VALIDATION - Validasi form input
+  # ──────────────────────────────────────────────────────────────────────────
+  form_field_validator: ^1.1.0      # Helper validasi form
+  
+  # ──────────────────────────────────────────────────────────────────────────
+  # LOADING & PROGRESS - Indikator loading
+  # ──────────────────────────────────────────────────────────────────────────
+  flutter_spinkit: ^5.2.0           # Beautiful loading indicators
+  
+  # ──────────────────────────────────────────────────────────────────────────
+  # RESPONSIVE - Buat UI responsive di semua device
+  # ──────────────────────────────────────────────────────────────────────────
+  flutter_screenutil: ^5.9.3        # Responsive helper WAJIB!
+  
+  # ──────────────────────────────────────────────────────────────────────────
+  # ICONS - Icon pack
+  # ──────────────────────────────────────────────────────────────────────────
+  flutter_feather_icons: ^2.0.0+1   # Feather icons (modern & clean)
+  
+  # ──────────────────────────────────────────────────────────────────────────
+  # ANIMATIONS - Animasi smooth
+  # ──────────────────────────────────────────────────────────────────────────
+  animations: ^2.0.11               # Material motion animations
+  lottie: ^2.7.0                    # Lottie animations (optional)
+  
+  # ──────────────────────────────────────────────────────────────────────────
+  # UTILS - Helper utilities
+  # ──────────────────────────────────────────────────────────────────────────
+  intl: ^0.19.0                    # Format date, number, currency
+  equatable: ^2.0.5                 # Simplify equality comparisons
+  geolocator: ^14.0.2
+  geocoding: ^4.0.0
+  permission_handler: ^11.3.1
+  flutter_foreground_task: ^8.0.0
+  http: ^1.2.2 
+  webview_flutter: ^4.4.2
+  crypto: ^3.0.3
+  flutter_map: ^7.0.2
+  latlong2: ^0.9.1             
+  cupertino_icons: ^1.0.2
+  video_player: ^2.8.2
+  chewie: ^1.7.5
+  flutter_local_notifications: ^18.0.1
+  firebase_core: ^3.8.1
+  firebase_messaging: ^15.1.5
+  image_cropper: ^8.0.2
+  image_picker: ^1.1.2  
+  image: ^4.0.17
+  path_provider: ^2.1.2
+  path: ^1.8.3
+  fl_chart: ^0.68.0
+  connectivity_plus: ^6.0.5
+  flutter_staggered_grid_view: ^0.7.0
+  carousel_slider: ^5.0.0
+  uuid: ^4.4.0
+  csv: ^6.0.0
+  file_picker: ^10.3.10
+  google_mlkit_text_recognition: ^0.13.1
+  mobile_scanner: ^5.2.3
+
+
+# ============================================================================
+# DEV DEPENDENCIES - Hanya untuk development, tidak masuk ke production
+# ============================================================================
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_launcher_icons: ^0.13.1
+  
+  # Linter rules untuk code quality
+  flutter_lints: ^3.0.0
+
+# ============================================================================
+# FLUTTER CONFIGURATION
+# ============================================================================
+flutter:
+  uses-material-design: true
+  
+  # ──────────────────────────────────────────────────────────────────────────
+  # ASSETS - File gambar, font, dll yang dibutuhkan aplikasi
+  # ──────────────────────────────────────────────────────────────────────────
+  assets:
+    - assets/images/
+    - assets/images/splash/
+    - assets/images/welcome_screen/
+    - assets/images/onboarding/
+    - assets/images/loginpage/
+    - assets/images/ceknim/
+    - assets/images/pilihrole/
+    - assets/images/homepage/
+    - assets/images/loginadmin/
+    - assets/icons/
+
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-VariableFont_opsz,wght.ttf
+        - asset: assets/fonts/Inter-Italic-VariableFont_opsz,wght.ttf
+          style: italic
+
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Montserrat-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Montserrat-Black.ttf
+          weight: 900
+
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Poppins-Black.ttf
+          weight: 900
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/icons/logoapk.png"
+
+
+
+# ============================================================================
+# CATATAN INSTALASI:
+# 
+# Setelah file ini dibuat, jalankan:
+# 1. flutter pub get           -> Download semua dependencies
+# 2. flutter pub upgrade       -> Update dependencies ke versi terbaru
+# 3. flutter clean             -> Clean build jika ada error
+# 
+# Total size dependencies: ~50MB (first time)
+# Build time: ~2-3 menit (first time)
+# ============================================================================
