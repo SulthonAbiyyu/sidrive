@@ -189,6 +189,19 @@ sidrive/
 
 ---
 
+## Quick Access
+
+| | Link |
+|---|---|
+| 📱 **Download APK** | [SiDrive v1.0.0 — GitHub Releases](https://github.com/SulthonAbiyyu/sidrive/releases/tag/v1.0.0) |
+| 🌐 **Admin Dashboard** | [aplikasi-ojek-dan-umkm-umsida.web.app](https://aplikasi-ojek-dan-umkm-umsida.web.app) |
+| 🎬 **Demo Video** | [Watch on YouTube](https://youtu.be/CztHOQvO2rU) |
+| 🔑 **Config Files** | [Google Drive — Request Access](https://drive.google.com/drive/folders/1Ke_b5TIH3q5nPOU_N0utDL1wQQlzkLok?usp=sharing) |
+
+> ⚠️ **Untuk mengakses Admin Dashboard**, login credentials (email & password admin) tersimpan di Google Drive di atas. Klik link dan request access — owner akan approve secara manual.
+
+---
+
 ## Getting Started
 
 ### Prerequisites
