@@ -194,30 +194,35 @@ sidrive/
 ### Prerequisites
 - Flutter SDK 3.x+
 - Android Studio or VS Code
-- A Supabase project
-- A Firebase project (for FCM)
-- A Midtrans account
 
 ### Setup
 
+> ⚠️ **Penting — Baca dulu sebelum mulai!**
+>
+> Project ini sudah memiliki backend Supabase, Firebase, dan Midtrans yang aktif dan berjalan.
+> **Kamu tidak perlu membuat project Supabase, Firebase, atau Midtrans baru.**
+> Cukup gunakan credentials yang sudah tersedia di Google Drive (lihat section 🔑 di bawah).
+> Steps 3 dan 5 di bawah hanya diperlukan jika kamu ingin deploy ulang ke project Supabase baru milikmu sendiri.
+
 ```bash
 # 1. Clone the repo
-git clone https://github.com/yourusername/sidrive.git
+git clone https://github.com/SulthonAbiyyu/sidrive.git
 cd sidrive
 
 # 2. Install dependencies
 flutter pub get
 
-# 3. Configure Supabase credentials
+# 3. [SKIP INI jika pakai project Supabase yang sudah ada]
+# Hanya isi jika kamu deploy ke Supabase baru milikmu sendiri
 # Open lib/config/constants.dart
 # Fill in your supabaseUrl and supabaseAnonKey
 
-# 4. Add Firebase config
-# Place google-services.json inside android/app/
-# Place the Firebase Admin SDK JSON inside the project root
-# (Request access to the config files via the link below)
+# 4. Tambahkan Firebase config (request via Google Drive di bawah)
+# Letakkan google-services.json di dalam android/app/
+# Letakkan file Firebase Admin SDK JSON di root project
 
-# 5. Set Edge Function secrets in Supabase Dashboard
+# 5. [SKIP INI jika pakai project Supabase yang sudah ada]
+# Hanya lakukan jika kamu deploy Edge Functions ke Supabase baru milikmu sendiri
 # Dashboard → Edge Functions → Secrets
 # Required: MIDTRANS_SERVER_KEY · FIREBASE_PROJECT_ID · FIREBASE_SERVICE_ACCOUNT_KEY
 
